@@ -6,6 +6,7 @@ print('____________________________________________________________')
 print('Welcome to Monster University')
 print('____________________________________________________________')
 
+list_of_attendees = []
 list_of_teachers = []
 list_of_students = []
 workshops_list = []
@@ -15,7 +16,7 @@ staff_id = 0
 while True:
     user_input = ''
     user_input = input('Choose your option? \n 1: Add Student \n 2: Add Teacher \n 3: Add Workshop \n 4: Add Skill to '
-                       'Student \n ')
+                       'Student \n 5: Add name to list of Attendees \n')
 
     if user_input == '1':
         print('Adding a New Student')
@@ -57,28 +58,23 @@ while True:
             user_input = input('Do you want to continue or quit:')
             continue
 
-
     elif user_input == '3':
         print('Adding Workshop')
-
 
         while user_input != 'quit':
 
             subject = input('What is the subject?')
 
-            list_of_attendants = input('Who are the attendees?')
-
             teacher_name = input('What is the teachers name?')
 
             workshop = Monster_workshop(subject,teacher_name)
 
-
             workshops_list.append(workshop)
             print(f'Subject: {workshops_list[-1].subject} ', f'Teacher Name: {workshops_list[-1].teacher}')
             user_input = input('Do you want to continue or quit:')
-            # for i in workshops_list:
-            #     print(i.subject,' ',i.teacher_name)
+
             continue
+
     elif user_input == '4':
         print('Add Skill to Student')
         # while loop
@@ -87,14 +83,20 @@ while True:
             # # student.skills.append(skill)
             # for i in list_of_students:
             #     i.skills.append(skill)
-            index_num = int(input('what is index number'))
+            stud_id = int(input('what is the Student ID')) - 1
             new_skill = input('What is the skill you want to add')
-            list_of_students[index_num].skills.append(new_skill)
+            list_of_students[stud_id].skills.append(new_skill)
 
-            print('Student skill: ', list_of_students[index_num].skills, 'Student name: ', list_of_students[index_num].f_name)
+            print('Student skill: ', list_of_students[stud_id].skills, 'Student name: ', list_of_students[stud_id].f_name)
 
             user_input = input('Continue or quit:')
             continue
+    elif user_input == '5':
+
+        workshopID = int(input('What is the workshop ID'))-1
+        attendant = input('Who is attending')
+        list_of_attendees.append(attendant)
+        #workshops_list[workshopID].append(list_of_attendees)
     else:
         print('please enter 1, 2, 3, or 4')
 
