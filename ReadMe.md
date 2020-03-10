@@ -1,6 +1,9 @@
 # Monsters Uni 
 
 ##### Use this file to run 
+```
+git clone git@github.com:victorsibanda/monsters_uni.git
+```
 
 ```python
 

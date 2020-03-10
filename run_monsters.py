@@ -14,8 +14,8 @@ staff_id = 0
 
 while True:
     user_input = ''
-    user_input = input('choose your option? \n 1: Add Student \n 2: Add Teacher \n 3: Add Workshop \n 4: Add Skill to '
-                       'list \n 5: Add skill to Student\n')
+    user_input = input('Choose your option? \n 1: Add Student \n 2: Add Teacher \n 3: Add Workshop \n 4: Add Skill to '
+                       'Student \n ')
 
     if user_input == '1':
         print('Adding a New Student')
@@ -74,24 +74,12 @@ while True:
 
 
             workshops_list.append(workshop)
-            print(f'Subject: {subject} ', f'Teacher Name: {teacher_name}')
+            print(f'Subject: {workshops_list[-1].subject} ', f'Teacher Name: {workshops_list[-1].teacher}')
             user_input = input('Do you want to continue or quit:')
             # for i in workshops_list:
             #     print(i.subject,' ',i.teacher_name)
             continue
     elif user_input == '4':
-        print('Adding New Skill')
-        skill_list = []
-
-        while user_input != 'quit':
-
-            skill = input('What is the skill?')
-
-            skill_list.append(skill)
-            print(f'Skill: {skill} ')
-            user_input = input('Do you want to continue or quit:')
-            continue
-    elif user_input == '5':
         print('Add Skill to Student')
         # while loop
         while user_input != 'quit':
@@ -108,6 +96,6 @@ while True:
             user_input = input('Continue or quit:')
             continue
     else:
-        print('please enter 1, 2, 3, 4 or 5')
+        print('please enter 1, 2, 3, or 4')
 
 
