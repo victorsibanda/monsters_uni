@@ -16,7 +16,8 @@ staff_id = 0
 while True:
     user_input = ''
     user_input = input('Choose your option? \n 1: Add Student \n 2: Add Teacher \n 3: Add Workshop \n 4: Add Skill to '
-                       'Student \n 5: Add name to list of Attendees \n 6: List out Students and their Skills \n')
+                       'Student \n 5: Add name to list of Attendees \n 6: List out Students and their Skills \n'
+                       ' 7: List Teachers \n 8: List Workshops \n')
 
     if user_input == '1':
         print('Adding a New Student')
@@ -96,14 +97,25 @@ while True:
         workshopID = int(input('What is the workshop ID'))-1
         attendant = input('Who is attending')
         list_of_attendees.append(attendant)
-        #workshops_list[workshopID].append(list_of_attendees)
 
     elif user_input == '6':
 
         for i in list_of_students:
             print (f'Student Name: {i.f_name}, {i.l_name}',f'Student_ID:{i.student_id}', f'Skills {i.skills}')
+    elif user_input == '7':
+
+        for r in list_of_teachers:
+            print (f'Student Name: {r.f_name}, {r.l_name}',f'Student_ID:{r.staff_id}')
+    elif user_input == '8':
+
+        for w in workshops_list:
+            print(f'Subject Name: {w.subject}',f'Teacher Name:{w.teacher}', f'Attendees {w.list_of_attendees}')
 
     else:
         print('please enter 1, 2, 3, or 4')
+
+
+#TODO Add attendees to list which is added to list of attendees
+#workshops_list[workshopID].append(list_of_attendees)
 
 
