@@ -16,7 +16,7 @@ staff_id = 0
 while True:
     user_input = ''
     user_input = input('Choose your option? \n 1: Add Student \n 2: Add Teacher \n 3: Add Workshop \n 4: Add Skill to '
-                       'Student \n 5: Add name to list of Attendees \n')
+                       'Student \n 5: Add name to list of Attendees \n 6: List out Students and their Skills \n')
 
     if user_input == '1':
         print('Adding a New Student')
@@ -97,6 +97,12 @@ while True:
         attendant = input('Who is attending')
         list_of_attendees.append(attendant)
         #workshops_list[workshopID].append(list_of_attendees)
+
+    elif user_input == '6':
+
+        for i in list_of_students:
+            print (f'Student Name: {i.f_name}, {i.l_name}',f'Student_ID:{i.student_id}', f'Skills {i.skills}')
+
     else:
         print('please enter 1, 2, 3, or 4')
 
