@@ -5,7 +5,9 @@ class Monsters():
         self.l_name = l_name
         self.skills = []
 
-
+    def add_skill(self,skills):
+        self.skills.append(skills)
+        return "New skill:" + skills
 
     # def invisibility(self):
     #     return
