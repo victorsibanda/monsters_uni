@@ -16,6 +16,12 @@ def add_skill(student,skill_list):
         student.add_skills(i)
 
 
+# f_name = input('Fname')
+# l_name = input('Lname')
+#
+# student2 = Students(f_name,l_name,1)
+#
+# print
 
 # student1 = Students('John','Fisher',1)
 #

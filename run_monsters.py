@@ -26,13 +26,10 @@ while True:
             user_input = input('Do you want to continue or quit:')
             continue
 
-
     elif user_input == '2':
         list_of_teachers = []
 
         staff_id = 0
-
-
 
         while user_input != 'quit' :
             staff_id += 1
@@ -94,19 +91,20 @@ while True:
 
         # while loop
         while user_input != 'quit':
-            for i in list_of_students:
-                i.skills.append(skill_list)
+            # # student = int(input('what is the student ID:'))
+            # # student.skills.append(skill)
+            # for i in list_of_students:
+            #     i.skills.append(skill)
+            index_num = int(input('what is index number'))
+            new_skill = input('What is the skill you want to add')
+            list_of_students[index_num].skills.append(new_skill)
 
-            print(student.skills)
+            print('Student skill: ', student.skills, 'Student name: ', student.f_name)
 
             user_input = input('Continue or quit:')
             continue
     else:
-        print('please enter 1 , 2 or 3')
+        print('please enter 1, 2, 3, 4 or 5')
         user_input = input('?')
 
 
-
-
-#if student is in list
-# add skill to student in list
