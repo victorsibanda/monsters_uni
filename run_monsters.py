@@ -72,6 +72,8 @@ while True:
             workshops_list.append(workshop)
             print(f'Subject: {subject} ', f'Teacher Name: {teacher_name}')
             user_input = input('Do you want to continue or quit:')
+            # for i in workshops_list:
+            #     print(i.subject,' ',i.teacher_name)
             continue
     elif user_input == '4':
 
