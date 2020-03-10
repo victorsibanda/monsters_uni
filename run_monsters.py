@@ -95,11 +95,11 @@ while True:
         # while loop
         while user_input != 'quit':
             for i in list_of_students:
-                student.skills.append(skill_list)
+                i.skills.append(skill_list)
 
             print(student.skills)
 
-            user_input = input('Do you want to continue or quit:')
+            user_input = input('Continue or quit:')
             continue
     else:
         print('please enter 1 , 2 or 3')
